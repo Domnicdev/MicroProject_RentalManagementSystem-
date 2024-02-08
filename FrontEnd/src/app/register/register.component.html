@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body>
+    <div class="container">
+        <form class="register-form" [formGroup]="myform" id="myform" (ngSubmit)="insertUser(myform.value)">
+            <h2>Register</h2>
+            <input type="text" placeholder="User ID" formControlName="userId" name="userid">
+            <div *ngIf="myform.get('userId')!.touched && myform.get('userId')!.invalid ">
+
+                <div *ngIf="myform.get('userId')!.hasError('required')">
+                    <font color="red">User ID required</font>
+                </div>
+        
+                <div *ngIf="myform.get('userId')!.hasError('pattern')">
+                    <font color="red">Invalid User ID </font>
+                </div>
+            </div>
+            <input type="text" placeholder="User Name" formControlName="userName" name="name">
+            <div *ngIf="myform.get('userName')!.touched && myform.get('userName')!.invalid ">
+
+                <div *ngIf="myform.get('userName')!.hasError('required')">
+                    <font color="red">Name required</font>
+                </div>
+        
+                <div *ngIf="myform.get('userName')!.hasError('pattern')">
+                    <font color="red">Invalid Name </font>
+                </div>
+            </div>
+            <input type="password" placeholder="User Password" formControlName="userPassword" name="name">
+            <div *ngIf="myform.get('userPassword')!.touched && myform.get('userPassword')!.invalid ">
+
+                <div *ngIf="myform.get('userPassword')!.hasError('required')">
+                    <font color="red">Password required</font>
+                </div>
+        
+                <div *ngIf="myform.get('userPassword')!.hasError('pattern')">
+                    <font color="red">Invalid Password </font>
+                </div>
+            </div>
+            <input type="email" placeholder="User Email" formControlName="userEmail" name="name">
+            <div *ngIf="myform.get('userEmail')!.touched && myform.get('userEmail')!.invalid ">
+
+                <div *ngIf="myform.get('userEmail')!.hasError('required')">
+                    <font color="red">Email required</font>
+                </div>
+        
+                <div *ngIf="myform.get('userEmail')!.hasError('pattern')">
+                    <font color="red">Invalid Email </font>
+                </div>
+            </div>
+            <input type="tel" placeholder="User Contact" formControlName="userContact" name="name">
+            <div *ngIf="myform.get('userContact')!.touched && myform.get('userContact')!.invalid ">
+
+                <div *ngIf="myform.get('userContact')!.hasError('required')">
+                    <font color="red">Contact No required</font>
+                </div>
+        
+                <div *ngIf="myform.get('userContact')!.hasError('pattern')">
+                    <font color="red">Invalid Contact No </font>
+                </div>
+            </div>
+            <select name="userType" id="userType" required formControlName="userType">
+                <option value="" disabled selected>User Type</option>
+                <option value="HouseOwner">House Owner</option>
+                <option value="Tenant">Tenant</option>
+            </select>
+            <button type="submit" (click)="insertUser(myform.value)">Register</button>
+
+            <b>{{result}}</b>
+
+            <br><br>
+
+            <a class="nav-link" routerLink="/home">Click here to return Home!</a>
+        </form>
+        
+    </div>
+</body>
+</html>

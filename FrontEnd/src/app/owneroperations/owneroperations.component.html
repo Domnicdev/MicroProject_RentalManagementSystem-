@@ -1,0 +1,180 @@
+<mat-tab-group>
+    <mat-tab label="Insert ">
+      <div class="container">
+        <form class="insert-form" [formGroup]="myform" id="myform" (ngSubmit)="register(myform.value)">
+          <h2>Insert House</h2>
+          <input type="text" placeholder="House ID" formControlName="houseId" name="Houseid">
+          <div *ngIf="myform.get('houseId')!.touched && myform.get('houseId')!.invalid ">
+
+            <div *ngIf="myform.get('houseId')!.hasError('required')">
+                <font color="red">House ID required</font>
+            </div>
+    
+            <div *ngIf="myform.get('houseId')!.hasError('pattern')">
+                <font color="red">Invalid House ID </font>
+            </div>
+        </div>
+          <input type="text" placeholder="House Type" formControlName="houseType" name="HouseType">
+          <div *ngIf="myform.get('houseType')!.touched && myform.get('houseType')!.invalid ">
+
+            <div *ngIf="myform.get('houseType')!.hasError('required')">
+                <font color="red">HouseType required</font>
+            </div>
+    
+            <div *ngIf="myform.get('houseType')!.hasError('pattern')">
+                <font color="red">Invalid HouseType </font>
+            </div>
+        </div>
+          <input type="number" placeholder="House Rent" formControlName="houseRent" name="HouseRent">
+          <div *ngIf="myform.get('houseRent')!.touched && myform.get('houseRent')!.invalid ">
+
+            <div *ngIf="myform.get('houseRent')!.hasError('required')">
+                <font color="red">HouseRent required</font>
+            </div>
+    
+            <div *ngIf="myform.get('dName')!.hasError('pattern')">
+                <font color="red">Invalid HouseRent </font>
+            </div>
+        </div>
+          <input type="text" placeholder="House Address" formControlName="houseAddress" name="HouseAddress">
+          <div *ngIf="myform.get('houseAddress')!.touched && myform.get('houseAddress')!.invalid ">
+
+            <div *ngIf="myform.get('houseAddress')!.hasError('required')">
+                <font color="red">HouseAddress required</font>
+            </div>
+    
+            <div *ngIf="myform.get('houseAddress')!.hasError('pattern')">
+                <font color="red">Invalid HouseAddress </font>
+            </div>
+        </div>
+          <input type="text" placeholder="User ID" formControlName="userId" name="UserId">
+          <div *ngIf="myform.get('userId')!.touched && myform.get('userId')!.invalid ">
+
+            <div *ngIf="myform.get('userId')!.hasError('required')">
+                <font color="red">User ID required</font>
+            </div>
+    
+            <div *ngIf="myform.get('userId')!.hasError('pattern')">
+                <font color="red">Invalid User ID </font>
+            </div>
+        </div>
+    
+          <button type="submit" value="Insertbtn" (click)="insertHouse(myform.value)">Insert</button>
+
+          <br>
+          <b>{{result}}</b>
+        </form>
+      </div>
+    </mat-tab>
+    <mat-tab label="Update ">
+        <div class="container">
+          <form class="insert-form" [formGroup]="myform" id="myform" (ngSubmit)="register(myform.value)">
+            <h2>Update House</h2>
+            <input type="text" placeholder="House ID" formControlName="houseId" name="Houseid">
+            <div *ngIf="myform.get('houseId')!.touched && myform.get('houseId')!.invalid ">
+  
+              <div *ngIf="myform.get('houseId')!.hasError('required')">
+                  <font color="red">House ID required</font>
+              </div>
+      
+              <div *ngIf="myform.get('houseId')!.hasError('pattern')">
+                  <font color="red">Invalid House ID </font>
+              </div>
+          </div>
+            <input type="text" placeholder="House Type" formControlName="houseType" name="HouseType">
+            <div *ngIf="myform.get('houseType')!.touched && myform.get('houseType')!.invalid ">
+  
+              <div *ngIf="myform.get('houseType')!.hasError('required')">
+                  <font color="red">HouseType required</font>
+              </div>
+      
+              <div *ngIf="myform.get('houseType')!.hasError('pattern')">
+                  <font color="red">Invalid HouseType </font>
+              </div>
+          </div>
+            <input type="number" placeholder="House Rent" formControlName="houseRent" name="HouseRent">
+            <div *ngIf="myform.get('houseRent')!.touched && myform.get('houseRent')!.invalid ">
+  
+              <div *ngIf="myform.get('houseRent')!.hasError('required')">
+                  <font color="red">HouseRent required</font>
+              </div>
+      
+              <div *ngIf="myform.get('dName')!.hasError('pattern')">
+                  <font color="red">Invalid HouseRent </font>
+              </div>
+          </div>
+            <input type="text" placeholder="House Address" formControlName="houseAddress" name="HouseAddress">
+            <div *ngIf="myform.get('houseAddress')!.touched && myform.get('houseAddress')!.invalid ">
+  
+              <div *ngIf="myform.get('houseAddress')!.hasError('required')">
+                  <font color="red">HouseAddress required</font>
+              </div>
+      
+              <div *ngIf="myform.get('houseAddress')!.hasError('pattern')">
+                  <font color="red">Invalid HouseAddress </font>
+              </div>
+          </div>
+            <input type="text" placeholder="User ID" formControlName="userId" name="UserId">
+            <div *ngIf="myform.get('userId')!.touched && myform.get('userId')!.invalid ">
+  
+              <div *ngIf="myform.get('userId')!.hasError('required')">
+                  <font color="red">User ID required</font>
+              </div>
+      
+              <div *ngIf="myform.get('userId')!.hasError('pattern')">
+                  <font color="red">Invalid User ID </font>
+              </div>
+          </div>
+      
+            <button type="submit" value="Insertbtn" (click)="updateHouse(myform.value)">Update</button>
+  
+            <br>
+            <b>{{result}}</b>
+          </form>
+        </div>
+      </mat-tab>
+      <mat-tab label="Delete">
+        <div class="container">
+          <table class="delete-table">
+            <thead>
+              <tr>
+                <th>House ID</th>
+                <th>House Type</th>
+                <th>Rent Amount</th>
+                <th>House Location</th>
+                <th>User ID</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let hos of hoList">
+                <td>{{hos.houseId}}</td>
+                      <td>{{hos.houseType}}</td>
+                      <td>{{hos.houseRent}}</td>
+                      <td>{{hos.houseAddress}}</td>
+                      <td>{{hos.userId}}</td>
+              </tr>
+            </tbody>
+          </table>
+          <form class="delete-form" [formGroup]="myform" id="myform">
+            <h2>Delete </h2>
+            <input type="text" placeholder="House ID to delete" formControlName="houseId" name="docid">
+            <div *ngIf="myform.get('houseId')!.touched && myform.get('houseId')!.invalid ">
+        
+                <div *ngIf="myform.get('houseId')!.hasError('required')">
+                    <font color="red">House ID required</font>
+                </div>
+        
+                <div *ngIf="myform.get('houseId')!.hasError('pattern')">
+                    <font color="red">Invalid ID </font>
+                </div>
+            </div>
+            <button type="submit" value="deletebtn" (click)="deleteHouse(myform.value)">Delete</button>
+            <br>
+            <br>
+            <b>{{result}}</b>
+          </form>
+        </div>
+      </mat-tab>
+    
+  </mat-tab-group>
+  

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House Rental Application</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+  
+  </style>
+</head>
+<body>
+
+
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#"><img src="https://freesvg.org/img/house.png" alt=" Logo" style="height: 55px;"> House Rental Management System </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto"> <!-- Align items to the right -->
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/logincomp">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://64.media.tumblr.com/cf84f4d19020e191a066e3e40ff516b0/tumblr_ne5w98IT7A1rn9vmdo1_500.gif" class="card-img-top" alt="Add House" style="height: 250px;">
+        <div class="card-body">
+          <h5 class="card-title">Insert/Delete/Update Houses </h5>
+          <button class="btn btn-primary" routerLink="/owneroperation">Go</button>
+          <!-- <a routerLink="/owneroperation">Operation</a> -->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card">
+          <img src="https://i.pinimg.com/originals/93/c7/44/93c744bcde1780c94bb1d3f03991f8a7.gif" class="card-img-top" alt="Add House" style="height: 250px;">
+          <div class="card-body">
+            <h5 class="card-title">Insert/Delete/Update Tenant </h5>
+            <button class="btn btn-primary" routerLink="/tenantcrud">Go</button>
+            <!-- <a routerLink="/owneroperation">Operation</a> -->
+  
+          </div>
+        </div>
+      </div>
+   
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://i.gifer.com/75ez.gif" class="card-img-top" alt="Add House" style="height: 220px;">
+          <div class="card-body">
+            <h5 class="card-title">Insert/Delete/Update HouseOwner </h5>
+            <button class="btn btn-primary" routerLink="/houseownercrud">Go</button>
+            <!-- <a routerLink="/owneroperation">Operation</a> -->
+  
+          </div>
+        </div>
+      </div>
+
+    
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://i.pinimg.com/originals/f5/27/0a/f5270acbc4b98112fcd520d2eea023de.gif" class="card-img-top" alt="Add House" style="height: 270px;">
+          <div class="card-body">
+            <h5 class="card-title">View Houses </h5>
+            <button class="btn btn-primary" routerLink="/viewhouse">Go</button>
+            <!-- <a routerLink="/owneroperation">Operation</a> -->
+  
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://cdn.dribbble.com/users/2985218/screenshots/11007223/media/8aa92a8c7b96f2ddeef9e824b9349837.gif" class="card-img-top" alt="Add House" style="height: 270px;">
+          <div class="card-body">
+            <h5 class="card-title">View Tenants </h5>
+            <button class="btn btn-primary" routerLink="/viewtenant">Go</button>
+            <!-- <a routerLink="/owneroperation">Operation</a> -->
+  
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://i.pinimg.com/originals/62/c3/79/62c379ae3baad2a6f3810a8ad1a19d47.gif" class="card-img-top" alt="Add House" style="height: 270px;">
+          <div class="card-body">
+            <h5 class="card-title">View House Owners </h5>
+            <button class="btn btn-primary" routerLink="/viewhouseowners">Go</button>
+            <!-- <a routerLink="/owneroperation">Operation</a> -->
+  
+          </div>
+        </div>
+      </div>
+
+
+
+  
+  
+   
+    
+  </div>
+</div>
+
+
+
+
+
+</body>
+</html>
+

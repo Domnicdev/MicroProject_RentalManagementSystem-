@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>House Rental Application</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+  
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#"><img src="https://freesvg.org/img/house.png" alt=" Logo" style="height: 55px;"> House Rental Management System </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto"> <!-- Align items to the right -->
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/logincomp">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://i.pinimg.com/originals/d3/18/13/d3181322e4522cf897fa8c1a038c6a2d.gif" class="card-img-top" alt="Add House" style="height: 200px;">
+        <div class="card-body">
+          <h5 class="card-title">Add/Remove/Edit Houses</h5>
+          <button class="btn btn-primary" routerLink="/owneroperation">Go</button>
+          <!-- <a routerLink="/owneroperation">Operation</a> -->
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://cdn.dribbble.com/users/1138853/screenshots/4841628/28_34_gif.gif" class="card-img-top" alt="View House" style="height: 200px;">
+        <div class="card-body">
+          <h5 class="card-title">View House</h5>
+          <button class="btn btn-primary" routerLink="/viewhouse">Go</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://cdn.dribbble.com/users/4241563/screenshots/11874468/media/7796309c77cf752615a3f9062e6a3b3d.gif" class="card-img-top" alt="Add Tenant" style="height: 200px;">
+        <div class="card-body">
+          <h5 class="card-title">View Tenant</h5>
+          <button class="btn btn-primary" routerLink="/viewtenant">Go</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://assets-global.website-files.com/6091b7081a1d7e13ccd7603a/630f98402278d21b4b1b0e73_62d6f6e5056ce9d0c8bac235_positive-review.gif" class="card-img-top" alt="Add Tenant" style="height: 200px;">
+        <div class="card-body">
+          <h5 class="card-title">View Reviews</h5>
+          <button class="btn btn-primary" routerLink="/viewreview">Go</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-md-4">
+      <div class="card">
+        <img src="https://cdn.dribbble.com/users/1280935/screenshots/6974685/media/ec4c386222b837da0ff6eabec3f59ba3.gif" class="card-img-top" alt="View Payment Status" style="height: 200px;">
+        <div class="card-body">
+          <h5 class="card-title">View Payment Status</h5>
+          <button class="btn btn-primary" routerLink="/paymentstatus">Go</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+</body>
+</html>
+

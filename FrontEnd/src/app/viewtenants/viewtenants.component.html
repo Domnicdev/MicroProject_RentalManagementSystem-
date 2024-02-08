@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg">
+  <a class="navbar-brand" href="#"><img src="https://freesvg.org/img/house.png" alt=" Logo" style="height: 55px;"> House Rental Management System </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <!-- <ul class="navbar-nav ml-auto"> 
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/register">Register</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/logincomp">Login</a>
+      </li>
+    </ul> -->
+  </div>
+</nav>
+
+<div class="container">
+<table class="zigzag">
+  <thead>
+    <tr>
+      <th>UserId</th>
+      <th>UserName</th>
+      <th>UserEmail</th>
+      <th>UserContract</th>
+
+
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let tena of tenantList">
+      <td>{{tena.userId}}</td>
+      <td>{{tena.userName}}</td>
+      <td>{{tena.userEmail}}</td>
+      <td>{{tena.userContact}}</td>
+     
+    </tr>
+   
+  </tbody>
+</table>
+  </div> 
+
+  
+
+

@@ -1,0 +1,43 @@
+<div class="container">
+    <form class="insert-form" [formGroup]="myform" id="myform" >
+      <h2>Insert Review</h2>
+      <input type="text" placeholder="Review ID" formControlName="reviewId" name="docid">
+      <div *ngIf="myform.get('reviewId')!.touched && myform.get('reviewId')!.invalid ">
+
+        <div *ngIf="myform.get('reviewId')!.hasError('required')">
+            <font color="red">reviewId  required</font>
+        </div>
+
+        <div *ngIf="myform.get('reviewId')!.hasError('pattern')">
+            <font color="red">Invalid reviewId </font>
+        </div>
+    </div>
+      <input type="text" placeholder="House Id" formControlName="houseId" name="docid">
+      <div *ngIf="myform.get('houseId')!.touched && myform.get('houseId')!.invalid ">
+
+        <div *ngIf="myform.get('houseId')!.hasError('required')">
+            <font color="red">House ID required</font>
+        </div>
+
+        <div *ngIf="myform.get('houseId')!.hasError('pattern')">
+            <font color="red">Invalid ID </font>
+        </div>
+    </div>
+    <input type="text" placeholder="Enter Review" formControlName="userReview" name="userReview">
+    <div *ngIf="myform.get('userReview')!.touched && myform.get('userReview')!.invalid ">
+
+        <div *ngIf="myform.get('userReview')!.hasError('required')">
+            <font color="red">userReview ID required</font>
+        </div>
+
+        <div *ngIf="myform.get('userReview')!.hasError('pattern')">
+            <font color="red">Invalid ID </font>
+        </div>
+    </div>
+      
+      <button type="submit" value="Insertbtn" (click)="insertReview(myform.value)">Insert</button>
+
+      <br>
+      <b>{{result}}</b>
+    </form>
+  </div>

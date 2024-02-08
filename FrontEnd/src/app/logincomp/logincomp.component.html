@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <form class="login-form"  [formGroup]="myform" id="myform">
+            <h2>Login</h2>
+            <input type="email" placeholder="User Email" formControlName="userEmail" name="email">
+            <div *ngIf="myform.get('userEmail')!.touched && myform.get('userEmail')!.invalid">
+                <div *ngIf="myform.get('userEmail')!.hasError('required')">
+                    <font color="red">*Email Id is required</font>
+                </div>
+                <div *ngIf="myform.get('userEmail')!.hasError('pattern')">
+                    <font color="red">*Invalid Email Id</font>
+                </div>
+            </div>
+            <input type="password" placeholder="User Password" formControlName="userPassword" name="name">
+            <div *ngIf="myform.get('userPassword')!.touched && myform.get('userPassword')!.invalid">
+                <div *ngIf="myform.get('userPassword')!.hasError('required')">
+                    <font color="red">*Password is required</font>
+                </div>
+                <div *ngIf="myform.get('userPassword')!.hasError('pattern')">
+                    <font color="red">*Invalid Password</font>
+                </div>
+            </div>
+            <button type="submit" (click)="login(myform.value)">Login</button>
+            <b>{{result}}</b>
+
+            <br><br>
+            <a class="nav-link" routerLink="/home">Click here to return Home!</a>
+
+
+        </form>
+    </div>
+</body>
+</html>

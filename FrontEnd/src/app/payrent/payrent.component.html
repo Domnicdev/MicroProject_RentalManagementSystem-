@@ -1,0 +1,118 @@
+<div class="container">
+    <table class="delete-table">
+        <thead>
+            <tr>
+                <th>PaymentId</th>
+                <th>RentAmount</th>
+                <th>DueAmount</th>
+                <th>PaidAmount</th>
+                <th>UserId</th>
+                <th>HouseId</th>
+
+
+            </tr>
+
+        </thead>
+        <tbody>
+            <tr *ngFor="let pay of payList">
+                <td>{{pay.paymentId}}</td>
+                <td>{{pay.rentAmount}}</td>
+                <td>{{pay.dueAmount}}</td>
+                <td>{{pay.paidAmount}}</td>
+                <td>{{pay.userId}}</td>
+                <td>{{pay.houseId}}</td>
+
+
+
+            </tr>
+        </tbody>
+    </table>
+    <form class="delete-form" [formGroup]="myform" id="myform">
+        <h2>Payment Page </h2>
+        <input type="text" placeholder="Payment Id" formControlName="paymentId" name="paymentId">
+        <div *ngIf="myform.get('paymentId')!.touched && myform.get('paymentId')!.invalid ">
+
+            <div *ngIf="myform.get('paymentId')!.hasError('required')">
+                <font color="red">paymentId required</font>
+            </div>
+
+            <div *ngIf="myform.get('paymentId')!.hasError('pattern')">
+                <font color="red">In valid paymentId </font>
+            </div>
+        </div>
+
+
+        <input type="text" placeholder="Rent Amount" formControlName="rentAmount" name="houseId">
+        <div *ngIf="myform.get('rentAmount')!.touched && myform.get('rentAmount')!.invalid ">
+
+            <div *ngIf="myform.get('rentAmount')!.hasError('required')">
+                <font color="red">houseId required</font>
+            </div>
+
+            <div *ngIf="myform.get('rentAmount')!.hasError('pattern')">
+                <font color="red">In valid houseId </font>
+            </div>
+        </div>
+
+        <input type="text" placeholder="Due Amount" formControlName="dueAmount" name="dueAmount">
+        <div *ngIf="myform.get('dueAmount')!.touched && myform.get('dueAmount')!.invalid ">
+
+            <div *ngIf="myform.get('dueAmount')!.hasError('required')">
+                <font color="red">rentAmount required</font>
+            </div>
+
+            <div *ngIf="myform.get('dueAmount')!.hasError('pattern')">
+                <font color="red">Invalid rentAmount </font>
+            </div>
+        </div>
+
+
+        <input type="text" placeholder="Paid Amount" formControlName="paidAmount" name="paidAmount">
+        <div *ngIf="myform.get('dueAmount')!.touched && myform.get('dueAmount')!.invalid ">
+
+            <div *ngIf="myform.get('paidAmount')!.touched && myform.get('paidAmount')!.invalid ">
+
+                <div *ngIf="myform.get('paidAmount')!.hasError('required')">
+                    <font color="red">paidAmount required</font>
+                </div>
+
+                <div *ngIf="myform.get('paidAmount')!.hasError('pattern')">
+                    <font color="red">Invalid paidAmount </font>
+                </div>
+            </div>
+          </div>
+
+          <input type="text" placeholder="User Id" formControlName="userId" name="rentAmount">
+          <div *ngIf="myform.get('userId')!.touched && myform.get('userId')!.invalid ">
+
+              <div *ngIf="myform.get('userId')!.hasError('required')">
+                  <font color="red">userId required</font>
+              </div>
+
+              <div *ngIf="myform.get('userId')!.hasError('pattern')">
+                  <font color="red">Invalid userId </font>
+              </div>
+          </div>
+
+
+        <input type="text" placeholder="House Id" formControlName="houseId" name="houseId">
+        <div *ngIf="myform.get('houseId')!.touched && myform.get('houseId')!.invalid ">
+
+            <div *ngIf="myform.get('houseId')!.hasError('required')">
+                <font color="red">houseId required</font>
+            </div>
+
+            <div *ngIf="myform.get('houseId')!.hasError('pattern')">
+                <font color="red">In valid houseId </font>
+            </div>
+        </div>
+
+   
+
+           
+            <button type="submit" value="paybtn" (click)="updateRentPayment(myform.value)">Pay Now</button>
+                <br>
+                <br>
+                <b>{{result}}</b>
+    </form>
+            

@@ -1,0 +1,44 @@
+body {
+    background-color: #f8f9fa; /* Light gray background color */
+    /* font-family: Arial, sans-serif; */
+  }
+
+  .card {
+    margin: 20px;
+    transition: transform 0.3s; /* Add smooth transition effect */
+  }
+
+  .card:hover {
+    transform: scale(1.1); /* Zoom in when hovered */
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+ 
+/* body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; 
+} */
+nav {
+  background-color: #ffffff; 
+  border-bottom: 1px solid #dee2e6; 
+}
+nav a {
+  color: #ffffff; 
+  background-color: #000000; 
+  font-family: monospace; 
+
+}
+nav a:hover {
+  color:  #000000; 
+  background-color: white; 
+}
+    .center-image {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90vh; 
+    }
+  

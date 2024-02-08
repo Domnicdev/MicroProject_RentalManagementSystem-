@@ -1,0 +1,16 @@
+body {
+    background-color: #f8f9fa; /* Light gray background color */
+  }
+
+  .card {
+    margin: 20px;
+    transition: transform 0.3s; /* Add smooth transition effect */
+  }
+
+  .card:hover {
+    transform: scale(1.1); /* Zoom in when hovered */
+  }
+
+  .btn {
+    width: 100%;
+  }
