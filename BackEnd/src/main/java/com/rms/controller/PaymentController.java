@@ -33,12 +33,7 @@ public class PaymentController {
 
 	}
 
-//	@GetMapping("PerformViewPaymentStatus/{paymentId}")
-//	public Payment performView(@PathVariable("paymentId") long paymentId) {
-//		Payment payment=repo.findById(paymentId).get();
-//		return payment;
-//	}
-//	
+	
 	@GetMapping("ViewAllPaidTenants")
 	public List<Payment> viewAllPaidTenants() {
 		Iterator<Payment> it = service.viewAllPaidTenants().iterator();
