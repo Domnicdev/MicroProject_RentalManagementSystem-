@@ -9,6 +9,7 @@
             <div *ngIf="myform.get('userId')!.hasError('required')">
                 <font color="red">User ID required</font>
             </div>
+              
 
             <div *ngIf="myform.get('userId')!.hasError('pattern')">
                 <font color="red">User ID </font>
