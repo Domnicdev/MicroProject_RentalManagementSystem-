@@ -12,7 +12,6 @@ import jakarta.persistence.Table;
 public class Review {
 
 	@Id
-//	@GeneratedValue(strategy = GenerationType.IDENTITY)	
 	@Column(name="review_id")
 	private long reviewId;
 	@Column(name = "user_review", nullable = false)
@@ -22,7 +21,6 @@ public class Review {
 
 	public Review() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Review(String userReview, long houseId) {
